@@ -1,0 +1,112 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px;
+    box-shadow: 0 1px 3px -2px teal;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &-logo {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &__image {
+            width: 32px;
+            height: 32px;
+        }
+
+        &__title {
+            color: teal;
+            font-size: 18px;
+        }
+    }
+
+    &-menu {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        gap: 60px;
+        color: gray;
+        padding: 0;
+        margin: 16px 0 0;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            transition: all 0.1s linear;
+
+            &:hover {
+                transition: all 0.1s linear;
+                transform: translateY(-2px);
+                color: rgb(3, 193, 193);
+                cursor: pointer;
+            }
+        }
+
+        hr {
+            border: none;
+            width: 80%;
+            height: 2px;
+            border-radius: 10px;
+            background: rgb(3, 193, 193);
+        }
+    }
+
+    &-user {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+
+        button {
+            outline: none;
+            border: 2px solid teal;
+            border-radius: 16px;
+            width: 100px;
+            height: 32px;
+            background: white;
+            color: teal;
+            cursor: pointer;
+            
+            &:hover{
+                color: white;
+                background: teal;
+
+                &:active{
+                    background: rgb(1, 78, 78);
+                    border: 2px solid rgb(1, 78, 78);
+                }
+            }
+        }
+
+    }
+
+    &-cart {
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &__count {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(222, 49, 1);
+            color: white;
+            border-radius: 10px;
+            font-size: 12px;
+            margin: -36px 0 0 16px;
+            position: absolute;
+        }
+    }
+
+}
