@@ -11,7 +11,7 @@ const Banner = () => {
         <h1>shop now</h1>
         <h1>and experience</h1>
         <h1>
-          <span className="banner-left__highlight">swift</span> savings
+          <span className="banner-left__highlight">shwift</span> savings
         </h1>
         <div className="banner-left__button">
           Check out our latest collection

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
-import shopswift from "../Assets/shopswift.png";
+import shopshwift from "../Assets/shopshwift.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 
@@ -23,9 +23,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to="/" className="navbar-logo">
-        <img className="navbar-logo__image" src={shopswift} alt="logo" />
+        <img className="navbar-logo__image" src={shopshwift} alt="logo" />
         <p className="navbar-logo__title">
-          Shop<strong>Swift</strong>
+          Shop<strong>Shwift</strong>
         </p>
       </Link>
       <ul className="navbar-menu">

@@ -1,5 +1,5 @@
 import React from "react";
-import shopswift from "../Assets/shopswift.png";
+import shopshwift from "../Assets/shopshwift.png";
 import { Link } from "react-router-dom";
 import { IoLogoFacebook, IoLogoWhatsapp } from "react-icons/io";
 import { AiFillTwitterCircle } from "react-icons/ai";
@@ -10,9 +10,9 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-content">
         <Link to="/" className="footer-logo">
-          <img className="footer-logo__image" src={shopswift} alt="logo" />
+          <img className="footer-logo__image" src={shopshwift} alt="logo" />
           <p className="footer-logo__title">
-            Shop<strong>Swift</strong>
+            Shop<strong>Shwift</strong>
           </p>
         </Link>
         <ul className="footer-links">

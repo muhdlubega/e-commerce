@@ -26,6 +26,7 @@ const Popular = () => {
   if (loading) {
     return <Loader />;
   }
+
   return (
     <div className="popular">
       <h1>TRENDING PRODUCTS</h1>

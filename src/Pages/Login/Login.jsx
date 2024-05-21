@@ -7,11 +7,19 @@ const Login = () => {
       <div className="login-container">
         <h1>Sign Up</h1>
         <div className="login-field">
-          <input type="text" placeholder="Your Name" />
-          <input type="text" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
+          <input className="login-input" type="text" placeholder="Your Name" />
+          <input
+            className="login-input"
+            type="text"
+            placeholder="Email Address"
+          />
+          <input
+            className="login-input"
+            type="password"
+            placeholder="Password"
+          />
         </div>
-        <button>Continue</button>
+        <button className="login-button">Continue</button>
         <p className="login-existing">
           Already have an account? <span>Login to your account</span>
         </p>
