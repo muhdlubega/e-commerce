@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Navbar.scss";
 import shopshwift from "../Assets/shopshwift.png";
 import { FaCartShopping } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
+  const { totalCartItems } = useContext(ShopContext);
   const [menu, setMenu] = useState("shop");
   const location = useLocation();
 
@@ -70,7 +72,7 @@ const Navbar = () => {
         </Link>
         <Link className="navbar-cart" to="/cart">
           <FaCartShopping size={22} color="teal" />
-          <div className="navbar-cart__count">0</div>
+          <div className="navbar-cart__count">{totalCartItems}</div>
         </Link>
       </div>
     </div>

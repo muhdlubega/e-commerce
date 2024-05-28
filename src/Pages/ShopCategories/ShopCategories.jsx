@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 import "./ShopCategories.scss";
 import { Link } from "react-router-dom";
-import { fetchProducts } from "../../Components/Assets/data";
 import Loader from "../../Components/Loader/Loader";
 import Item from "../../Components/Items/Item";
+import { ShopContext } from "../../Context/ShopContext";
 
 const ShopCategories = ({ bannerImage, category, promotion }) => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const productsData = await fetchProducts();
-        setProducts(productsData);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error loading products:", error);
-        setLoading(false);
-      }
-    };
-
-    getProducts();
-  }, []);
+  const { loading, products } = useContext(ShopContext);
 
   if (loading) {
     return <Loader />;

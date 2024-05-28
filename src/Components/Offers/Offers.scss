@@ -2,12 +2,12 @@
     display: flex;
     height: 300px;
     width: 65%;
-    padding: 20px;
     justify-content: space-between;
     margin: 120px auto;
-    padding: 0px 100px;
+    padding-right: 40px;
     align-items: flex-end;
-    background: linear-gradient(190deg,rgb(242, 212, 206),  rgb(246, 208, 208), white 60% );
+    background: linear-gradient(190deg, rgb(242, 212, 206), rgb(246, 208, 208), white 60%);
+    flex-direction: row-reverse;
 
     &-right {
         img {
@@ -17,6 +17,12 @@
     }
 
     &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        padding-right: 40px;
+
         h2 {
             color: rgb(75, 74, 74);
             font-size: 20px;

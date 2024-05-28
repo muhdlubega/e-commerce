@@ -1,27 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
 import "./NewCollections.scss";
-import { fetchProducts } from "../Assets/data";
 import Item from "../Items/Item";
 import Loader from "../Loader/Loader";
+import { ShopContext } from "../../Context/ShopContext";
 
 const NewCollections = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const productsData = await fetchProducts();
-        setProducts(productsData);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error loading products:", error);
-        setLoading(false);
-      }
-    };
-
-    getProducts();
-  }, []);
+  const { loading, products } = useContext(ShopContext);
 
   if (loading) {
     return <Loader />;

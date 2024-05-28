@@ -4,6 +4,7 @@ import { fetchProductById } from "../../Components/Assets/data";
 import Breadcrumb from "../../Components/Breadcrumb/Breadcrumb";
 import Loader from "../../Components/Loader/Loader";
 import ProductDisplay from "../../Components/ProductDisplay/ProductDisplay";
+import RelatedProducts from "../../Components/RelatedProducts/RelatedProducts";
 
 const Product = () => {
   const [product, setProduct] = useState([]);
@@ -23,9 +24,8 @@ const Product = () => {
     };
 
     getProduct();
+    window.scrollTo(0, 0);
   }, [productId]);
-
-  console.log(product);
 
   if (loading) {
     return <Loader />;
@@ -35,6 +35,7 @@ const Product = () => {
     <div>
       <Breadcrumb product={product} />
       <ProductDisplay product={product} />
+      <RelatedProducts />
     </div>
   );
 };
